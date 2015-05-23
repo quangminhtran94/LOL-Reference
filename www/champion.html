@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta name="viewport" content="target-densitydpi=device-dpi" />
+        <meta charset="utf-8">
+        <title>LOL Dictionary</title>
+        <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.5.css">
+        <script src="jquery/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div data-role="page" id="champion-detail">
+            <div data-role="header">
+                <a href="#" class="ui-btn ui-btn-icon-left ui-btn ui-btn-inline ui-corner-all ui-icon-arrow-l" data-rel="back">Back</a>
+                <h1 id="champion-name"></h1>
+            </div>
+            <div data-role="main">
+                <div align = "center" id="champion-image"></div>
+                <div align = "center" id="champion-title"></div>
+                <div data-role="collapsible" id="info">
+                    <h4>Info</h4>
+                    <p>
+                    <div class="progress-bar" id="attack">
+                        <img src="image/Attackpower.png" width="20px" height="20px"/>
+                        <div></div>
+                    </div>
+                    <div class="progress-bar" id="magic">
+                        <img src="image/Abilitypower.png" width="20px" height="20px"/>
+                        <div></div>
+                    </div>
+                    <div class="progress-bar" id="defense">
+                        <img src="image/Defensepower.png" width="20px" height="20px"/>
+                        <div></div>
+                    </div>
+                    <div class="progress-bar" id="difficulty">
+                        <img src="image/Difficulty.png" width="20px" height="20px"/>
+                        <div></div>
+                    </div>
+                    </p>
+                </div>
+                <div data-role="collapsible" id="champion-stats">
+                    <h4>Champion Stats</h4>
+                    <p>
+                        <span id="stat-label">Attack Damage: </span><span id="attackdamage"></span><br>
+                        <span id="stat-label">Attack Range: </span><span id="attackrange"></span><br>
+                        <span id="stat-label">Attack Speed: </span><span id="attackspeed"></span><br>
+                        <span id="stat-label">Armor: </span><span id="armor"> </span><br>
+                        <span id="stat-label">Magic Resist: </span><span id="spellblock"></span><br>
+                        <span id="stat-label">HP: </span><span id="hp"></span><br>
+                        <span id="stat-label">HP Regen: </span><span id="hpregen"></span><br>
+                        <span id="stat-label">MP: </span><span id="mp"></span><br>
+                        <span id="stat-label">MP Regen: </span><span id="mpregen"></span><br>
+                        <span id="stat-label">Move Speed: </span><span id="movespeed"></span><br>
+                    </p>
+                </div>
+                <div  data-role="collapsible"  data-inset="true">
+                    <h4>Spells</h4>
+                    <ul data-role="listview" id="champion-spells">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
