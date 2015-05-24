@@ -35,7 +35,7 @@
             });
 
             $(document).ready(function(){
-                $.ajax({url: BASE_URL + STATIC_DATA_CATEGORY + NA_REGION + VERSION + CHAMPION_CATEGORY + "?champData=info&"+ API_KEY, success: function(result){
+                $.ajax({url: BASE_URL + STATIC_DATA_CATEGORY + NA_REGION + VERSION + CHAMPION_CATEGORY + "?champData=info&"+ API_KEY, dataType:'jsonp', success: function(result){
                     $.each(result.data,function(key, value){
                         $("#champion-list").append("<li id='"+value.id+"'><a href='#'>"+ value.name +"</a></li>").listview("refresh");
                     })
