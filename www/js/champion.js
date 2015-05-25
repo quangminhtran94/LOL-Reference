@@ -1,19 +1,21 @@
 $(document).on('pageinit', "#champion-detail",function () {
 	var parameters = $(this).data("url").split("?")[1];
-	id = parameters.replace("id=","");  
-	$.ajax({url: BASE_URL + STATIC_DATA_CATEGORY + NA_REGION + VERSION + CHAMPION_CATEGORY + "/"+id+"?champData=image,stats,info,spells,passive&"+API_KEY, success: function(result){
+	id = parameters.replace("id=","");
+	changeLang(language);
+	$.ajax({url: BASE_URL + STATIC_DATA_CATEGORY + NA_REGION + VERSION + CHAMPION_CATEGORY + "/"+id+"?"+LOCATION+"="+language+ "&champData=image,stats,info,spells,passive&"+API_KEY, success: function(result){
 		$('#champion-name').text(result.name);
 		$('#champion-title').text(result.title);
 		$.each(result.info, function(key, value){
 			var selector='#'+key+" div";
-
 			$(selector).css("width", (value*8).toString()+"%" );
 		})
-
 		$.each(result.stats, function(key, value){
-			var selector='#'+key;
-			$(selector).empty();
-			$(selector).append(value);
+			var selector = '#'+key;
+			if($(selector).length){
+				$(selector).empty();
+				$(selector).append(value);
+			}
+			
 		});
 
 		var atkspd = (0.625/(1+result.stats.attackspeedoffset)).toFixed(2);
@@ -33,8 +35,6 @@ $(document).on('pageinit', "#champion-detail",function () {
 		$('#champion-spells li p').css("white-space","normal");
 	}});
 });   
-
-
 function SpellToString(spell, str){
 	var start=0;
 	str = str.replace(/{{ cost }}/g, spell.costBurn);

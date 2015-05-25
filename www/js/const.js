@@ -4,6 +4,8 @@ const NA_REGION = "/na";
 const VERSION = "/v1.2";
 const API_KEY = "api_key=9cbeeaf4-5fef-4ce8-8088-0665fb515e7d";
 const CHAMPION_CATEGORY="/champion";
-const BASE_CHAMPION_IMAGE_URL = "http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/";
-const BASE_SPELL_IMAGE_URL = "http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/";
-const BASE_PASSIVE_IMAGE_URL = "http://ddragon.leagueoflegends.com/cdn/5.2.1/img/passive/";
+const LOCATION ="locale";
+const BASE_CHAMPION_IMAGE_URL = "http://ddragon.leagueoflegends.com/cdn/5.9.1/img/champion/";
+const BASE_SPELL_IMAGE_URL = "http://ddragon.leagueoflegends.com/cdn/5.9.1/img/spell/";
+const BASE_PASSIVE_IMAGE_URL = "http://ddragon.leagueoflegends.com/cdn/5.9.1/img/passive/";
+var atkdmg =['Attach Damage: ','Sát thương vật lý: ']

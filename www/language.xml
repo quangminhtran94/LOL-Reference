@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translations>
+    <translation id="search">
+        <en_US>Type to search</en_US>
+        <vn_VN>Tìm kiếm</vn_VN>
+    </translation>
+	<translation id="champion-main-header">
+        <en_US>Champions</en_US>
+        <vn_VN>Danh sách tướng</vn_VN>
+    </translation>
+	<translation id="back">
+        <en_US>Back</en_US>
+        <vn_VN>Quay lại</vn_VN>
+    </translation>
+	<translation id="champion-info-title">
+        <en_US>Info</en_US>
+        <vn_VN>Tổng quan</vn_VN>
+    </translation>
+	<translation id="champion-stats-title">
+        <en_US>Stats</en_US>
+        <vn_VN>Chỉ số</vn_VN>
+    </translation>
+	<translation id="champion-spells-title">
+        <en_US>Spells</en_US>
+        <vn_VN>Kĩ năng</vn_VN>
+    </translation>
+	<translation id="atk-dmg-title">
+        <en_US>Attack Damage: </en_US>
+        <vn_VN>Sát thương vật lý: </vn_VN>
+    </translation>
+	<translation id="atk-rng-title">
+        <en_US>Attack Range: </en_US>
+        <vn_VN>Tầm bắn: </vn_VN>
+    </translation>
+	<translation id="atk-spd-title">
+        <en_US>Attack Speed: </en_US>
+        <vn_VN>Tốc độ đánh: </vn_VN>
+    </translation>
+	<translation id="arm-title">
+        <en_US>Armor: </en_US>
+        <vn_VN>Giáp: </vn_VN>
+    </translation>
+	<translation id="mg-res-title">
+        <en_US>Magic Resist: </en_US>
+        <vn_VN>Kháng phép: </vn_VN>
+    </translation>
+	<translation id="hp-title">
+        <en_US>HP: </en_US>
+        <vn_VN>Máu: </vn_VN>
+    </translation>
+	<translation id="hp-reg-title">
+        <en_US>HP Regen: </en_US>
+        <vn_VN>Hồi máu: </vn_VN>
+    </translation>
+	<translation id="mp-title">
+        <en_US>MP: </en_US>
+        <vn_VN>Năng lượng: </vn_VN>
+    </translation>
+	<translation id="mp-reg-title">
+        <en_US>MP Regen: </en_US>
+        <vn_VN>Hồi năng lượng: </vn_VN>
+    </translation>
+	<translation id="spd-title">
+        <en_US>Move speed: </en_US>
+        <vn_VN>Tốc độ di chuyển: </vn_VN>
+    </translation>
+</translations>

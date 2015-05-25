@@ -28,6 +28,7 @@
         <script type="text/javascript" src="js/const.js"></script>
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <script>
+            var language = "en_US";
             $(document).on( "mobileinit", function() {
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
@@ -35,28 +36,51 @@
             });
 
             $(document).ready(function(){
-                $.ajax({url: BASE_URL + STATIC_DATA_CATEGORY + NA_REGION + VERSION + CHAMPION_CATEGORY + "?champData=info&"+ API_KEY, dataType:'json', isLocal: true, success: function(result){
+                $.ajax({url: BASE_URL + STATIC_DATA_CATEGORY + NA_REGION + VERSION + CHAMPION_CATEGORY + "?champData=info&"+ API_KEY, dataType:'json', success: function(result){
                     $.each(result.data,function(key, value){
                         $("#champion-list").append("<li id='"+value.id+"'><a href='#'>"+ value.name +"</a></li>").listview("refresh");
                     })
                 }});
+
+                $('#select-language').change(function(){
+                    language = $(this).val();
+                    changeLang(language);
+                });       
             });
 
             $(document).on('pageinit', "#index",function () {
                 $(document).on('click', "#champion-list li",function () {     
                     $.mobile.changePage('champion.html', { dataUrl : "champion.html?id="+$(this).attr('id'), data : { 'id' : $(this).attr('id') }, reloadPage : false, changeHash : true });
-            })});          
+            })});
+            function changeLang(language){
+                    $.ajax({url: 'language.xml',success: function(xml) {
+                        $(xml).find('translation').each(function(){
+                            var id = $(this).attr('id');
+                            var text = $(this).find(language).text();
+                            $("#" + id).empty();
+                            $("#" + id).append(text);
+                    });
+                }});
+            }
         </script>
         <script type="text/javascript" src="js/champion.js"></script>
     </head>
     <body>
         <div data-role="page" id="index">
-            <div data-role="header"><h1>Champion</h1></div>
+            <div data-role="header" data-position="inline">
+                <div class="ui-btn-inline ui-btn-left">
+                    <select id="select-language" data-mini="false" data-inline="true">
+                        <option value="en_US">English</option>
+                        <option value="vn_VN">Tiếng Việt</option>
+                    </select>
+                </div>
+                <h1 data-inline="true" id="champion-main-header">Champion</h1>
+            </div>
             <div data-role="main">
                 <form>
-                    <input id="filter-for-listview" data-type="search" placeholder="Type to search...">
+                    <input id="search" data-type="search" placeholder="Type to search...">
                 </form>
-                <ul id="champion-list" data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+                <ul id="champion-list" data-role="listview" data-inset="true" data-filter="true" data-input="#search">
                 </ul>
             </div>
         </div>
