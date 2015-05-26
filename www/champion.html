@@ -31,17 +31,18 @@
         </script>
     </head>
     <body>
-        <div data-role="page" id="champion-detail">
-            <div data-role="header">
-                <a href="#" class="ui-btn ui-btn-icon-left ui-btn ui-btn-inline ui-corner-all ui-icon-arrow-l" data-rel="back">Back</a>
+        <div data-role="page" id="champion-detail" >
+            <div data-role="header" data-theme="a">
+                <a href="#" class="ui-btn ui-btn-icon-left ui-btn ui-btn-inline ui-corner-all ui-icon-arrow-l" data-rel="back" id="back">Back</a>
                 <h1 id="champion-name"></h1>
             </div>
-            <div data-role="main">
-                <div align = "center" id="champion-image"></div>
-                <div align = "center" id="champion-title"></div>
-                <div data-role="collapsible" id="info">
+            <div data-role="main" >
+                <br>
+                <div align = "center" id="champion-image" ></div>
+                <div align = "center" id="champion-title" ></div>
+                <div data-role="collapsible" id="info" data-theme="d">
                     <h4><span id="champion-info-title"></span></h4>
-                    <p>
+                    <p >
                     <div class="progress-bar" id="attack">
                         <img src="image/Attackpower.png" width="20px" height="20px"/>
                         <div></div>
@@ -60,7 +61,7 @@
                     </div>
                     </p>
                 </div>
-                <div data-role="collapsible" id="champion-stats">
+                <div data-role="collapsible" id="champion-stats" data-theme="d">
                     <h4><span id="champion-stats-title"></span></h4>
                     <p>
                         <span id="atk-dmg-title">Attack Damage: </span><span id="attackdamage"></span><br>
@@ -75,9 +76,14 @@
                         <span id="spd-title">Move Speed: </span><span id="movespeed"></span><br>
                     </p>
                 </div>
-                <div  data-role="collapsible"  data-inset="true">
+                <div data-role="collapsible"  data-inset="true" data-theme="d">
                     <h4><span id="champion-spells-title"></span></h4>
                     <ul data-role="listview" id="champion-spells">
+                    </ul>
+                </div>
+                <div data-role="collapsible" data-inset="true" data-theme="d" id="champion-recommend">
+                    <h4><span id="champion-recommend-title"></span></h4>
+                    <ul data-role="listview" id="recommended-items">
                     </ul>
                 </div>
             </div>

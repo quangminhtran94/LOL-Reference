@@ -24,6 +24,10 @@
         <en_US>Spells</en_US>
         <vn_VN>Kĩ năng</vn_VN>
     </translation>
+	<translation id="champion-recommend-title">
+		<en_US>Recommendation</en_US>
+		<vn_VN>Gợi ý lên đồ</vn_VN>
+	</translation>
 	<translation id="atk-dmg-title">
         <en_US>Attack Damage: </en_US>
         <vn_VN>Sát thương vật lý: </vn_VN>
@@ -64,4 +68,33 @@
         <en_US>Move speed: </en_US>
         <vn_VN>Tốc độ di chuyển: </vn_VN>
     </translation>
+	<translation id="starting-title">
+        <en_US>Starting Items: </en_US>
+        <vn_VN>Đồ khởi đầu:  </vn_VN>
+    </translation>
+	<translation id="startingjungle-title">
+        <en_US>Starting Items for Jungler: </en_US>
+        <vn_VN>Đồ khởi đầu đi rừng:  </vn_VN>
+    </translation>
+	<translation id="essential-title">
+        <en_US>Essential Items: </en_US>
+        <vn_VN>Nhu yếu phẩm:  </vn_VN>
+    </translation>
+	<translation id="essentialjungle-title">
+        <en_US>Essential Items for Jungler: </en_US>
+        <vn_VN>Nhu yếu phẩm đi rừng:  </vn_VN>
+    </translation>
+	<translation id="offensive-title">
+        <en_US>Offensive Items: </en_US>
+        <vn_VN>Đồ công kích:  </vn_VN>
+    </translation>
+	<translation id="defensive-title">
+        <en_US>Defensive Items: </en_US>
+        <vn_VN>Đồ phòng ngự:  </vn_VN>
+    </translation>
+	<translation id="consumables-title">
+        <en_US>Consumables: </en_US>
+        <vn_VN>Đồ tiêu hao:  </vn_VN>
+    </translation>
+	
 </translations>

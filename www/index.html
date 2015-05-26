@@ -26,8 +26,10 @@
         <script src="jquery/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.js"></script>
         <script type="text/javascript" src="js/const.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <script>
+
             var language = "en_US";
             $(document).on( "mobileinit", function() {
                 $.support.cors = true;
@@ -53,21 +55,25 @@
                     $.mobile.changePage('champion.html', { dataUrl : "champion.html?id="+$(this).attr('id'), data : { 'id' : $(this).attr('id') }, reloadPage : false, changeHash : true });
             })});
             function changeLang(language){
-                    $.ajax({url: 'language.xml',success: function(xml) {
-                        $(xml).find('translation').each(function(){
-                            var id = $(this).attr('id');
-                            var text = $(this).find(language).text();
-                            $("#" + id).empty();
-                            $("#" + id).append(text);
-                    });
-                }});
+                $.ajax({url: 'language.xml',success: function(xml) {
+                 $(xml).find('translation').each(function(){
+                    var id = $(this).attr('id');
+                    var text = $(this).find(language).text();
+                    if(id == "search"){
+                        $("#"+id).attr("placeholder", text);
+                    }else{
+                        $("#" + id).empty();
+                        $("#" + id).append(text);
+                    }
+                });
+             }});
             }
         </script>
         <script type="text/javascript" src="js/champion.js"></script>
     </head>
     <body>
-        <div data-role="page" id="index">
-            <div data-role="header" data-position="inline">
+        <div data-role="page" id="index" >
+            <div data-role="header" data-position="inline" >
                 <div class="ui-btn-inline ui-btn-left">
                     <select id="select-language" data-mini="false" data-inline="true">
                         <option value="en_US">English</option>
@@ -76,11 +82,11 @@
                 </div>
                 <h1 data-inline="true" id="champion-main-header">Champion</h1>
             </div>
-            <div data-role="main">
+            <div data-role="main" data-theme="f">
                 <form>
-                    <input id="search" data-type="search" placeholder="Type to search...">
+                    <input id="search" data-type="search" placeholder="Type to search..." >
                 </form>
-                <ul id="champion-list" data-role="listview" data-inset="true" data-filter="true" data-input="#search">
+                <ul id="champion-list" data-role="listview" data-inset="true" data-filter="true" data-input="#search" >
                 </ul>
             </div>
         </div>
